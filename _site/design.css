@@ -1,0 +1,276 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+--
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/*Fin du reset*/
+
+@font-face {
+    font-family: 'garagegothicbold';
+    src: url('fonts/garage_gothic_bold-webfont.woff2') format('woff2'),
+         url('fonts/garage_gothic_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*
+marron : #8e6349;
+saumon : #ffbd80;
+gris : #202d32;
+*/
+
+h1,h2,h3, span, .contact, .nav li a, .button{
+  text-align: center;
+  font-family:"garagegothicbold", sans-serif;
+  color: #202d32;
+}
+
+h1{
+  font-size: 5em;
+  }
+
+.title{
+  margin: 0 0 5em 0;
+  text-align: center;
+}
+
+.title span{
+  text-transform: uppercase;
+  color: #8e6349;
+  font-size: 1.5em;
+}
+
+h2{
+  font-size: 2em;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+}
+
+h3{font-size: 1.8em;}
+
+p{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 25px;
+  text-align: center;
+  margin: 1em 0 0.5em 0;
+}
+
+b{
+  font-weight: 400;
+}
+
+p.short{line-height: 22px;}
+
+#logo{
+  width: 40%;
+  display: block;
+}
+
+#menu{
+  margin: 0 auto;
+  margin-bottom: 6em;
+  padding-bottom: 1em;
+  width: 50%;
+  border-bottom: 3px solid #ffbd80;
+}
+
+#menu h2{
+  margin-top: 1em;
+}
+
+p.menu{
+  font-size: 1.8em;
+}
+
+.menu span{
+padding-left: 1em;
+padding-right: 1em;
+}
+
+.navbar{
+  padding: 0 5em 0 5em;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.navbar-light .navbar-nav .nav-link{
+  text-transform: uppercase;
+  margin: 0.5em;
+  font-size: 1.5em;
+  font-family:"garagegothicbold", sans-serif;
+  color: #8e6349;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover{
+  color: #b78669;
+  border-top: 3px solid #b78669;
+}
+
+.navbar-expand-lg .navbar-collapse{
+  justify-content:flex-end;
+}
+
+.bg{
+  background-image: url('/photos/chol.jpg');
+  background-repeat:no-repeat;
+  background-size: 70%;
+  height: 500px;
+  background-position: center;
+}
+
+span img{margin:0 0.3em 0 0.3em;}
+
+h3 span img{width: 25px;}
+
+img.profil{
+  width: 50%;
+}
+
+.carousel{
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 2em;
+}
+
+.contact li a{
+  color: #ffbd80;
+}
+
+.contact li a:hover, .contact li a:focus{
+  color: #ffbd80;
+}
+
+.contact li{
+  font-size: 1.4em;
+  margin: 0.5em;
+  line-height: 1.2em;
+}
+
+.form-control:focus{
+  border-color: #ffbd80;
+  box-shadow :0 0 0 0.05rem #ffbd80;
+}
+
+label{padding-bottom: 0.5em;}
+
+.button{
+  background-color: #202d32;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.6em;
+  padding: 0.4em 1em 0.2em 1em;
+  border: none;
+  float: right;
+}
+
+footer{
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 3em;
+  min-height: 5em;
+  background-color: #202d32;
+  color: white;
+  padding: 1em;
+  font-size: 0.9em;
+}
+
+footer ul li{
+  line-height: 1.4em;
+}
+
+footer .nav li a{
+  color: white;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+footer .nav li a:hover, footer .nav li a:focus{
+  text-decoration: underline;
+}
+
+
+footer li a{
+  color: white;
+}
+
+footer li a:hover, footer li a:focus{
+  color: white;
+}
+
+@media screen and (max-width: 1395px) {
+  footer{width: 100%}
+  .navbar{width: 100%;}
+  .bg{
+    background-image: url('/photos/chol.jpg');
+    background-size: 100%;
+    min-height: 100px;
+  }
+  #menu{width: 80%;}
+}
+
+@media screen and (max-width: 991px) {
+  p.short{line-height: 25px;}
+  .menu span{display: none;}
+}
+
+@media screen and (max-width: 800px) {
+   .bg{
+    background-image: url('/photos/chol2.jpg');
+    background-size: 50%;
+    height: 400px;
+  }
+  p.menu{font-size: 1.2em;}
+  .navbar{padding: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .bg{
+    background-size: 100%;
+  }
+}
