@@ -211,6 +211,15 @@ background-image: url("data:image/svg+xml,svg+xml,%253csvg xmlns='http://www.w3.
   box-shadow :0 0 0 0.05rem #ffbd80;
 }
 
+.devis{
+  font-size: 0.9em;
+  font-family: 'open sans', sans-serif;
+  font-style: italic;
+  text-align: left;
+  line-height: 1.2em;
+  margin-top: 0;
+}
+
 label{padding-bottom: 0.5em;}
 
 .button{
