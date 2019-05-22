@@ -270,7 +270,7 @@ footer li a:hover, footer li a:focus{
   footer{width: 100%}
   .navbar{width: 100%;}
   .bg{
-    background-image: url('/photos/chol.jpg');
+    background-image: url('/choltraiteur/photos/chol.jpg');
     background-size: 100%;
     min-height: 100px;
   }
