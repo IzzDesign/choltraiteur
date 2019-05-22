@@ -10,7 +10,12 @@
       <div id="menu" class="text-center">
         <img src="photos/logo-icone.jpg">
         <h2>Suggestion du week-end&nbsp;:</h2>
-        <p class="menu"><span><img src="photos/rond.svg"></span>{% include menu.html %}<span><img src="photos/rond.svg"></span></p>
+        <div class="menu">
+          {% capture menu_string %}
+          {% include menu.html %}
+          {% endcapture %}
+          {{ menu_string | strip | newline_to_br }}
+        </div>
       </div>
       <h2><span><img src="span.svg"></span>Qui nous sommes<span><img src="span.svg"></span></h2>
         <div class="row text-center align">
