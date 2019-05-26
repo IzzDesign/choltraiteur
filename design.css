@@ -48,6 +48,12 @@ table {
 }
 /*Fin du reset*/
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 @font-face {
     font-family: 'garagegothicbold';
     src: url('fonts/garage_gothic_bold-webfont.woff2') format('woff2'),
@@ -63,7 +69,7 @@ saumon : #ffbd80;
 gris : #202d32;
 */
 
-h1,h2,h3, span, .contact, .nav li a, .button{
+h1,h2,h3, h4, span, .contact, .nav li a, .button{
   text-align: center;
   font-family:"garagegothicbold", sans-serif;
   color: #202d32;
@@ -112,11 +118,18 @@ p.short{line-height: 22px;}
   display: block;
 }
 
+.section{
+  margin-top: 7em;
+}
+
+.bottom{
+  margin-bottom: 2em;
+}
+
 #menu{
   margin: 0 auto;
   margin-bottom: 6em;
   padding-bottom: 1em;
-  width: 50%;
   border-bottom: 3px solid #ffbd80;
 }
 
@@ -157,7 +170,7 @@ padding-right: 1em;
 }
 
 .bg{
-  background-image: url('/choltraiteur/photos/chol.jpg');
+  background-image: url('choltraiteur/photos/chol.jpg');
   background-repeat:no-repeat;
   background-size: 70%;
   height: 500px;
@@ -172,26 +185,6 @@ img.profil{
   width: 50%;
 }
 
-.carousel{
-  width: 60%;
-  margin: 0 auto;
-  margin-top: 2em;
-}
-
-/*.carousel-control-next{
-  right: -80px;
-}
-.carousel-control-prev{
-  left: -80px;
-}
-.carousel-control-next-icon{
-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2523ffbd' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
-}
-
-.carousel-control-prev-icon{
-background-image: url("data:image/svg+xml,svg+xml,%253csvg xmlns='http://www.w3.org/2000/svg' fill='%2523ffbd' viewBox='0 0 8 8'%253e%253cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%253e%253c/svg%253e");
-}
-*/
 .contact li a{
   color: #ffbd80;
 }
@@ -232,10 +225,17 @@ label{padding-bottom: 0.5em;}
   float: right;
 }
 
+.reseau{
+  width: 20px;
+  margin-right: 1em;
+  vertical-align: bottom;
+  padding-bottom: 0.15em;
+}
+
 footer{
-  width: 100%;
+  width: 75%;
   margin: 0 auto;
-  margin-top: 3em;
+  margin-top: auto;
   min-height: 5em;
   background-color: #202d32;
   color: white;
@@ -287,7 +287,8 @@ footer li a:hover, footer li a:focus{
     background-size: 50%;
     height: 400px;
   }
-  .menu{font-size: 1.2em;}
+  h2{font-size: 1.7em;}
+  .menu{font-size: 1.4em;}
   .navbar{padding: 0;}
 }
 
@@ -295,4 +296,6 @@ footer li a:hover, footer li a:focus{
   .bg{
     background-size: 100%;
   }
+    h2{font-size: 1.2em;}
+  .menu{font-size: 1em;}
 }

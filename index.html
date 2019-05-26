@@ -2,25 +2,16 @@
 
 ---
     {% include head.html %}
+    <div class="bg"></div>
     <div class="container">
       <div class="title">
         <h1>Chol Traiteur</h1>
-        <span>20 ans d'expériences à vos côtés</span>
+        <span>20 ans d'expérience à vos côtés</span>
       </div>
-      <div id="menu" class="text-center">
-        <img src="photos/logo-icone.jpg">
-        <h2>Suggestion du week-end&nbsp;:</h2>
-        <div class="menu">
-          {% capture menu_string %}
-          {% include menu.html %}
-          {% endcapture %}
-          {{ menu_string | strip | newline_to_br }}
-        </div>
-      </div>
-      <h2><span><img src="span.svg"></span>Qui nous sommes<span><img src="span.svg"></span></h2>
-        <div class="row text-center align">
+      <h2><span><img src="span.svg"></span>Qui sommes nous<span><img src="span.svg"></span></h2>
+        <div class="row text-center">
           <div class="col-lg-4 offset-lg-1">
-            <img src="/choltraiteur/photos/serge.jpg" class="profil img-responsive">
+            <img src="/choltraiteur/photos/serge.jpg" class="profil img-responsive" alt="photo de Serge" title="photo de Serge">
             <h3><span><img src="span.svg"></span>Serge<span><img src="span.svg"></span></h3>
               <p>Serge a 35 ans, et <b>la cuisine, c’est l’histoire de sa vie&nbsp;!</b> A 16 ans il commence son apprentissage et depuis, cette passion ne l’a jamais vraiment quitté.<p>
 
@@ -31,9 +22,9 @@
              <p>Alors, c’est tout naturellement qu’il reprend l’entreprise qu’il connait si bien, et qu’il faisait déjà tourner depuis quelques années, avec celle qui partage maintenant sa vie.</p>
           </div>
           <div class="col-lg-4 offset-lg-2">
-            <img src="/choltraiteur/photos/marie.jpg" class="profil img-responsive">
+            <img src="/choltraiteur/photos/marie.jpg" class="profil img-responsive" alt="photo de Marie" title="photo de Marie">
             <h3><span><img src="span.svg"></span>Marie<span><img src="span.svg"></span></h3>
-              <p class="short">Après 5 années d’études à Vatel à Lyon en management hôtelier international, où elle travaille notamment chez Jacques Chibois à Grasse, à la Palme d’Or à Cannes et chez Emmanuel Renault à Megève, Marie décide de partir travailler en Australie pendant un an, car elle s’est découvert pendant ses études une vraie passion pour le voyage. Pas moins de 17 pays au compteur, qu’elle a visité en sac à dos avec des copines ou pour le travail.<p>
+              <p class="short">Après 5 années d’études à Vatel à Lyon en management hôtelier international, où elle travaille notamment chez Jacques Chibois à Grasse, à la Palme d’Or à Cannes et chez Emmanuel Renault à Megève, Marie décide de partir travailler en Australie pendant un an, car elle s’est découvert pendant ses études une vraie passion pour le voyage. Pas moins de 17 pays au compteur, qu’elle a visité en sac à dos pour le travail ou avec des amies.<p>
 
               <p class="short">Fin 2014 quand elle rentre, son frère a ouvert le premier food truck de Bourgogne et elle le rejoint pour l’aider, en cherchant du travail à côté, dans cette région qui est depuis devenue sa region de cœur.</p>
 
@@ -43,7 +34,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-8 offset-lg-2">
+        <div class="col-lg-8 offset-lg-2 bottom">
           <h3><span><img src="span.svg"></span>Nous<span><img src="span.svg"></span></h3>
           <p>Nous avons eu un <b>coup de foudre professionnel (et pas que&nbsp;!)</b> et c’est tout naturellement que nous avons décidé de se lancer ensemble dans cette folle aventure&nbsp;!</p>
 
