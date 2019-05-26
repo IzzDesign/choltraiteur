@@ -170,7 +170,7 @@ padding-right: 1em;
 }
 
 .bg{
-  background-image: url('choltraiteur/photos/chol.jpg');
+  background-image: url('/choltraiteur/photos/chol.jpg');
   background-repeat:no-repeat;
   background-size: 70%;
   height: 500px;
