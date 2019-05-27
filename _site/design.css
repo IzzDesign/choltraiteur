@@ -102,7 +102,7 @@ p, .menu{
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   font-size: 17px;
-  line-height: 25px;
+  line-height: 30px;
   text-align: center;
   margin: 1em 0 0.5em 0;
 }
@@ -278,7 +278,11 @@ footer li a:hover, footer li a:focus{
 
 @media screen and (max-width: 991px) {
   p.short{line-height: 25px;}
+  #menu{margin-bottom: 3em;}
   .menu span{display: none;}
+  .section{margin-top: 3em;margin-bottom: 2em;}
+  .carousel{margin-top: 2em;}
+  h3{margin-top: 2em;}
 }
 
 @media screen and (max-width: 800px) {
