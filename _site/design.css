@@ -98,13 +98,17 @@ h2{
 
 h3{font-size: 1.8em;}
 
-p, .menu{
+p{
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   font-size: 17px;
-  line-height: 30px;
+  line-height: 27px;
   text-align: center;
   margin: 1em 0 0.5em 0;
+}
+
+.menu{
+  line-height: 30px;
 }
 
 b{
