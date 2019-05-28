@@ -174,7 +174,7 @@ padding-right: 1em;
 }
 
 .bg{
-  background-image: url('/choltraiteur/photos/chol.jpg');
+  background-image: url('/photos/chol.jpg');
   background-repeat:no-repeat;
   background-size: 70%;
   height: 500px;
@@ -291,7 +291,7 @@ footer li a:hover, footer li a:focus{
 
 @media screen and (max-width: 800px) {
    .bg{
-    background-image: url('/choltraiteur/photos/chol2.jpg');
+    background-image: url('/photos/chol2.jpg');
     background-size: 50%;
     height: 400px;
   }
