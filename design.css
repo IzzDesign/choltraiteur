@@ -98,7 +98,7 @@ h2{
 
 h3{font-size: 1.8em;}
 
-p{
+p, .menu{
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   font-size: 17px;
@@ -304,6 +304,8 @@ footer li a:hover, footer li a:focus{
   .bg{
     background-size: 100%;
   }
-    h2{font-size: 1.2em;}
-  .menu{font-size: 1em;}
+  h2{font-size: 1.5em;}
+  .menu{font-size: 1.5em;}
+  #menu h2{font-size: 1.2em;}
+  h3{margin-top: 0.8em;}
 }
