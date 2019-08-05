@@ -17,7 +17,13 @@
 
     {% include analytics.html %}
 
-    <title>Chol traiteur</title>
+    <title>
+      {% if page.title %}
+        {{ page.title }} &middot; Chol traiteur
+      {% else %}
+        Chol traiteur
+      {% endif %}
+      </title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
