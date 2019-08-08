@@ -79,6 +79,9 @@ h1{
   font-size: 5em;
   }
 
+  a{color:#8e6349;text-decoration: underline;}
+  a:hover, a:focus{color:#8e6349;}
+
 .title{
   margin: 0 0 5em 0;
   text-align: center;
@@ -158,11 +161,21 @@ padding-right: 1em;
 
 .navbar-light .navbar-nav .nav-link{
   text-transform: uppercase;
+  text-decoration: none;
   margin: 0.5em;
   font-size: 1.5em;
   font-family:"garagegothicbold", sans-serif;
   color: #8e6349;
   border-top: 3px solid #f8f9fa;
+}
+
+#boutique{
+  color: black;
+}
+
+#boutique:focus, #boutique:hover{
+  color: #39393B;
+  border-top: 3px solid #39393B;
 }
 
 .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover{
@@ -235,6 +248,22 @@ label{padding-bottom: 0.5em;}
   margin-right: 1em;
   vertical-align: bottom;
   padding-bottom: 0.15em;
+}
+
+.partenaires{
+  text-align: center;
+  font-family:"garagegothicbold", sans-serif;
+  font-size: 1.5em;
+  color: #202d32;
+}
+
+.partenaires li{
+  margin-bottom: 0.8em;
+}
+
+.partenaires li a{
+  color: #202d32;
+  text-decoration: underline;
 }
 
 footer{
