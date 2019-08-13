@@ -129,6 +129,8 @@ p.short{line-height: 22px;}
   margin-top: 7em;
 }
 
+.space{margin: 2em 0 2em 0;}
+
 .bottom{
   margin-bottom: 2em;
 }
@@ -203,11 +205,18 @@ img.profil{
   width: 50%;
 }
 
-.contact li a{
+.contactboutique li{
+  text-align: center;
+  font-family:"garagegothicbold", sans-serif;
+  font-size: 1.5em;
+  color: #202d32;
+}
+
+.contact li a, .contactboutique li a{
   color: #ffbd80;
 }
 
-.contact li a:hover, .contact li a:focus{
+.contact li a:hover, .contact li a:focus, .contactboutique li a:hover, .contactboutique li a:focus{
   color: #ffbd80;
 }
 
@@ -258,7 +267,7 @@ label{padding-bottom: 0.5em;}
 }
 
 .partenaires li{
-  margin-bottom: 0.8em;
+  margin-bottom: 1.2em;
 }
 
 .partenaires li a{
