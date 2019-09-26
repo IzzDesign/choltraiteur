@@ -129,7 +129,7 @@ p.short{line-height: 22px;}
   margin-top: 7em;
 }
 
-.space{margin: 2em 0 2em 0;}
+.space{padding-top: 2em;}
 
 .bottom{
   margin-bottom: 2em;
@@ -205,11 +205,15 @@ img.profil{
   width: 50%;
 }
 
+.contactboutique{
+  margin-top: 5em;
+}
 .contactboutique li{
   text-align: center;
   font-family:"garagegothicbold", sans-serif;
   font-size: 1.5em;
   color: #202d32;
+  line-height: 1.2em;
 }
 
 .contact li a, .contactboutique li a{
@@ -309,6 +313,10 @@ footer li a:hover, footer li a:focus{
   color: white;
 }
 
+@media screen and (max-width: 1795px) {
+  .contactboutique{margin-top: 2em;}
+}
+
 @media screen and (max-width: 1395px) {
   footer{width: 100%}
   .navbar{width: 100%;}
@@ -317,6 +325,7 @@ footer li a:hover, footer li a:focus{
     min-height: 100px;
   }
   #menu{width: 80%;}
+  .contactboutique{margin-top: 1em;}
 }
 
 @media screen and (max-width: 991px) {
