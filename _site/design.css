@@ -110,6 +110,9 @@ p, .menu{
   margin: 1em 0 0.5em 0;
 }
 
+.boutique{margin-top: 2em;}
+.boutique p{margin: 0.5em 0 0.3em 0;}
+
 .menu{
   line-height: 30px;
 }
@@ -206,7 +209,7 @@ img.profil{
 }
 
 .contactboutique{
-  margin-top: 5em;
+  margin-top: 1em;
 }
 .contactboutique li{
   text-align: center;
@@ -271,7 +274,7 @@ label{padding-bottom: 0.5em;}
 }
 
 .partenaires li{
-  margin-bottom: 1.2em;
+  margin-bottom: 1em;
 }
 
 .partenaires li a{
