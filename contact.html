@@ -17,14 +17,14 @@ title: Contact
           </ul>
         </div>
         <div class="col-lg-7 offset-lg-2">
-          <form action="https://formspree.io/contact@choltraiteur.fr" method="POST" />
+          <form action="https://neamar.fr/email.php" method="POST" id="contactform"/>
             <div class="form-group">
               <label for="exampleFormControlInput1">Email</label>
-              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nom@exemple.fr" name="email">
+              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nom@exemple.fr" name="_replyto">
             </div>
             <div class="form-group">
               <label for="exampleFormControlSelect1">Objet</label>
-              <select class="form-control" id="exampleFormControlSelect1">
+              <select class="form-control" id="exampleFormControlSelect1" name="_subject">
                 <option>Devis</option>
                 <option>Demande de renseignements</option>
                 <option>Autre</option>
@@ -35,11 +35,11 @@ title: Contact
               <p class="devis">Pour une demande de devis, n'hésitez pas à préciser : le nombre de convives, la date, si besoin de vaiselle et/ou de serveurs ainsi que vos coordonnées.</p>
               <textarea class="form-control" id="exampleFormControlTextarea1" rows="9" name="message"></textarea>
             </div>
+            <input type="hidden" name="_to" value="contact@choltraiteur.fr" />
             <input class="button" type="submit" value="Envoyer">
-            <input type="hidden" name="_language" value="fr" />
           </form>
         </div>
       </div>
     </div>
 
-  {% include footer.html %}
+  {% include footer.html with_contact_script=1 %}
