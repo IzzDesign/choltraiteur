@@ -233,6 +233,14 @@ img.profil{
   line-height: 1.2em;
 }
 
+.info{
+  font-family:"garagegothicbold", sans-serif;
+  font-size: 1.5em;
+}
+
+.error{color: red;visibility: hidden;}
+.success{color:green;visibility: hidden;}
+
 .form-control:focus{
   border-color: #ffbd80;
   box-shadow :0 0 0 0.05rem #ffbd80;
