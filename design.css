@@ -241,7 +241,7 @@ img.profil{
 .error{color: red;display: none;}
 .success{color:green;display: none;}
 
-.form-control:focus{
+#contactform:focus{
   border-color: #ffbd80;
   box-shadow :0 0 0 0.05rem #ffbd80;
 }
