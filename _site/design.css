@@ -60,7 +60,6 @@ body {
          url('fonts/garage_gothic_bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 /*
@@ -241,7 +240,7 @@ img.profil{
 .error{color: red;display: none;}
 .success{color:green;display: none;}
 
-.form-control:focus{
+#contactform:focus{
   border-color: #ffbd80;
   box-shadow :0 0 0 0.05rem #ffbd80;
 }
@@ -265,6 +264,22 @@ label{padding-bottom: 0.5em;}
   padding: 0.4em 1em 0.2em 1em;
   border: none;
   float: right;
+}
+
+.pdf{
+  font-size: 1.6em;
+  padding: 0.4em 1em 0.2em 1em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.pdf img{width: 60px;}
+
+.pdf .text{
+  padding-bottom: 1em;
+  color: #4c8063;
+  font-family: "garagegothicbold";
+  font-size:1.5em;
 }
 
 .reseau{
