@@ -266,20 +266,22 @@ label{padding-bottom: 0.5em;}
   float: right;
 }
 
+a.test{color: black;}
+
 .pdf{
   font-size: 1.6em;
-  padding: 0.4em 1em 0.2em 1em;
+  padding: 0.4em 1em 0.4em 1em;
   margin-bottom: 1em;
   text-align: center;
+  font-family: "garagegothicbold";
+  border: 3px dotted #4c8063;
 }
 
 .pdf img{width: 60px;}
-
-.pdf .text{
-  padding-bottom: 1em;
+.pdf span{
   color: #4c8063;
-  font-family: "garagegothicbold";
   font-size:1.5em;
+  padding: 0 0.2em 0 0.2em;
 }
 
 .reseau{
