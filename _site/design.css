@@ -274,12 +274,17 @@ a.test{color: black;}
   margin-bottom: 1em;
   text-align: center;
   font-family: "garagegothicbold";
-  border: 3px dotted #4c8063;
 }
 
-.pdf img{width: 60px;}
+.noel{border: 3px dotted #4c8063;}
+.noel span{color: #4c8063;}
+
+.saintval{border: 3px dotted #FF6E72;}
+.saintval span{color: #FF6E72;}
+
+.noel img{width: 60px;}
+.saintval img{width: 25px;}
 .pdf span{
-  color: #4c8063;
   font-size:1.5em;
   padding: 0 0.2em 0 0.2em;
 }
