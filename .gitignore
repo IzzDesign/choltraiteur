@@ -1,3 +1,5 @@
+_site/
+.jekyll-cache
 # Windows thumbnail cache files
 Thumbs.db
 ehthumbs.db
