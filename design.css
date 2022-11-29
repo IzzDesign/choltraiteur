@@ -277,8 +277,8 @@ label{padding-bottom: 0.5em;}
 .chol{background-color:#8e6349; padding: 0.5em 0.5em; max-width:350px;}
 .chol:hover{background-color:#D4946C; max-width:380px;text-decoration: none; transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;}
 a.ddl,a.ddl:hover{text-decoration: none;}
-a.carte img{width: 100%;transition: all 0.5s ease-in;}
-a.carte img:hover{width: 105%;transition: all 0.5s ease-out;}
+a.carte img{width:100%;transform: scale(1);transition: all 0.5s ease-in;}
+a.carte img:hover{transform: scale(1.05);transition: all 0.5s ease-out;}
 img.span{width: 25px;}
 .saint-val{background-color:#F95761; padding: 0.5em 0.5em; max-width:350px;}
 .saint-val:hover{background-color:#FA777A; max-width:380px;text-decoration: none; transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;}
