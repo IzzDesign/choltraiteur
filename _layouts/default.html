@@ -1,12 +1,12 @@
+---
+---
+
 <!doctype html>
 <html lang="fr">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="icon" href="favicon.ico">
@@ -59,3 +59,59 @@
         </ul>
       </div>
     </nav>
+
+{{ content }}
+
+    <footer>
+      <img src="/photos/footer/plat.png" width="350" class="footer-img">
+      <div>
+        <img src="/photos/footer/logo-blanc.png" width="300">
+        <p>86 route de Dijon</p>
+        <p>21470 Brazey en Plaine</p>
+        <a href="">contact@choltraiteur.fr</a>
+        <p>03 80 29 82 67 — 06 71 21 46 93</p>
+      </div>
+      <div>
+        <p>Service traiteur Particuliers</p>
+        <ul>
+          <li>Vin d’honneur</li>
+          <li>Mariage</li>
+          <li>Traiteur</li>
+          <li>Cocktail</li>
+          <li>Boissons</li>
+          <li>Brunch/Buffet</li>
+          <li>Portage de repas</li>
+        </ul>
+      </div>
+      <div>
+        <p>Service traiteur Professionnels</p>
+        <ul>
+          <li>Plateaux repas</li>
+          <li>Repas chaud</li>
+          <li>Café accueil</li>
+          <li>Boissons</li>
+        </ul>
+      </div>
+      <img src="/photos/footer/decoration.png" class="footer-img">
+    </footer>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+    {% if include.with_contact_script %}
+    {% include script.html %}
+    {% endif %}
+    <script type="text/javascript">
+      $('.carousel').carousel({
+        interval: 2000
+      })
+      $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+          event.preventDefault();
+          $(this).ekkoLightbox();
+      });
+    </script>
+  </body>
+</html>
