@@ -9,8 +9,7 @@
 
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="icon" href="favicon.ico">
-    <link rel="stylesheet" type="text/css" href="design.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
+    <link rel="stylesheet" type="text/css" href="/design.css">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
@@ -27,10 +26,10 @@
   </head>
   <body>
     <nav class="sub-menu">
-      <a href="index.html" id="logo"><img src="photos/logo.png"></a>
-      <a class="active" href="#">Accueil</a>
+      <a href="/" id="logo"><img src="/photos/logo.png"></a>
+      <a class="active" href="/">Accueil</a>
       <div class="sub-menu-nav particuliers">
-        <button class="nav-btn">Services particuliers</button>
+        <a href="/services-particuliers/services-particuliers.html" class="nav-btn">Services particuliers</a>
         <div class="sub-menu-alt">
           <a href="#">Vin d'honneur</a>
           <a href="#">Mariage</a>
@@ -42,7 +41,7 @@
         </div>
       </div> 
       <div class="sub-menu-nav pro">
-        <button class="nav-btn">Services professionnels</button>
+        <a href="services-professionnels/services-professionnels.html" class="nav-btn">Services professionnels</a>
         <div class="sub-menu-alt">
           <a href="#">Plateaux repas</a>
           <a href="#">Repas chaud</a>
@@ -59,7 +58,7 @@
       <h3>Contact</h3>
       <form action="https://neamar.fr/email.php" method="POST" id="contactform" onsubmit="document.getElementById('protection').value = 2"/>
         <input type="hidden" name="protection" id="protection" value="1" />
-        <p>Pour une demande de devis, n'hésitez pas à préciser : le nombre de convives, la date, si besoin de vaiselle et/ou de serveurs ainsi que vos coordonnées.</p>
+        <p>Pour une demande de devis, n'hésitez pas à préciser : le nombre de convives, la date, si besoin de vaisselle et/ou de serveurs ainsi que vos coordonnées.</p>
         <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email" name="_replyto">
         <input type="hidden" name="_subject" value="Contact choltraiteur.fr" />
         <textarea class="form-control" id="exampleFormControlTextarea1" rows="12" name="message"></textarea>
@@ -85,44 +84,29 @@
       <div>
         <p>Service traiteur Particuliers</p>
         <ul>
-          <li>Vin d’honneur</li>
-          <li>Mariage</li>
-          <li>Traiteur</li>
-          <li>Cocktail</li>
-          <li>Boissons</li>
-          <li>Brunch/Buffet</li>
-          <li>Portage de repas</li>
+          <li><a href="">Vin d’honneur</a></li>
+          <li><a href="">Mariage</a></li>
+          <li><a href="">Traiteur</a></li>
+          <li><a href="">Cocktail</a></li>
+          <li><a href="">Boissons</a></li>
+          <li><a href="">Brunch/Buffet</a></li>
+          <li><a href="">Portage de repas</a></li>
         </ul>
       </div>
       <div>
         <p>Service traiteur Professionnels</p>
         <ul>
-          <li>Plateaux repas</li>
-          <li>Repas chaud</li>
-          <li>Café accueil</li>
-          <li>Boissons</li>
+          <li><a href="">Plateaux repas</a></li>
+          <li><a href="">Repas chaud</a></li>
+          <li><a href="">Café accueil</a></li>
+          <li><a href="">Boissons</a></li>
         </ul>
       </div>
       <img src="/photos/footer/decoration.png" class="footer-img">
     </footer>
 
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
     {% if include.with_contact_script %}
-    {% include script.html %}
+      {% include script.html %}
     {% endif %}
-    <script type="text/javascript">
-      $('.carousel').carousel({
-        interval: 2000
-      })
-      $(document).on('click', '[data-toggle="lightbox"]', function(event) {
-          event.preventDefault();
-          $(this).ekkoLightbox();
-      });
-    </script>
   </body>
 </html>

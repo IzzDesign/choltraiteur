@@ -95,6 +95,7 @@ body {
   align-items: center;
   min-height: 100vh;
   max-width: 1950px;
+  width: 100%;
   font-family: var(--font-text);
 }
 
@@ -123,7 +124,7 @@ nav{
   .pro{
     --sub-menu: 200px;
   }
-  .nav-btn{
+  a.nav-btn{
     width: var(--sub-menu);
   }
   .sub-menu-alt a{
@@ -135,38 +136,30 @@ nav{
 .sub-menu a:not(#logo) {
   font-size: 16px;
   display: inline-block;
-  min-width: 90px;
-  color: white;
+  color: var(--black);
   text-align: center;
-  padding: 14px 16px;
+  padding: 14px 5px;
   text-decoration: none;
   transition: all .5s;
+  box-sizing: border-box;
+  min-width: 120px;
+  font-weight: 700;
+  cursor:pointer;
+  margin: 0;
+  border-left: 1px solid var(--black);
+  border-right: 1px solid var(--black);
 }
 
-.active {
+.sub-menu a:not(#logo).active {
   background: var(--black);
+  color: white;
 }
 
 .sub-menu-nav {
   overflow: hidden;
 }
 
-.sub-menu-nav .nav-btn {
-  cursor:pointer;
-  min-width: 120px;
-  font-size: 16px;  
-  color: var(--black);
-  border: none;
-  outline: none;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  font-weight: 700;
-  margin: 0;
-  transition: all .5s;
-}
-
- .sub-menu-nav:hover .nav-btn {
+.sub-menu .sub-menu-nav:hover a:not(#logo){
   background-color: var(--black);
   color: white;
 }
@@ -180,15 +173,15 @@ nav{
   z-index: 1;
 }
 
-.sub-menu-alt a {
+.sub-menu .sub-menu-nav .sub-menu-alt a {
   min-width: 90px;
   color: white;
   text-decoration: none;
 }
 
-.sub-menu-alt a:hover {
+.sub-menu .sub-menu-nav .sub-menu-alt a:not(#logo):hover {
   background-color: white;
-  color: var(--black) !important;
+  color: var(--black);
 }
 
 .sub-menu-nav:hover .sub-menu-alt {
@@ -295,10 +288,8 @@ p.big_p{
   }
 }
 
-section{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.bandeau_pages{
+
 }
 
 .grey{
@@ -308,7 +299,7 @@ section{
   box-sizing: border-box;
 }
 
-.grey.avis, .grey.contact{
+.grey.avis{
   padding: 0 3em 2em 3em;
   margin-top: 2em;
   h3{
@@ -372,11 +363,21 @@ button.cta, input[type=submit], a.cta-link{
   font-weight: 400;
   min-height: 40px;
   box-sizing: border-box;
+  transition: all ease-in-out 0.5s;
+  border: 2px solid transparent;
+  cursor: pointer;
+  &:hover{
+    border: 2px solid var(--black);
+    background-color: transparent;
+    color: var(--black);
+  }
 }
 
 .reseaux{
   background-color: var(--black);
   color: white;
+  width: 100%;
+  box-sizing: border-box;
   justify-content: space-around;
   padding: 1em 3em;
   .row{
@@ -409,6 +410,10 @@ button.cta, input[type=submit], a.cta-link{
     gap: 30px;
     padding: 0 1em 0 2em;
     margin-top: 1em;
+    img{
+      width: 520px;
+      height: 520px;
+    }
     h2{
       text-align: left;
     }
@@ -489,11 +494,26 @@ a{
   input[type=radio]{
     order: 2;
   }
-  div#radio-1:checked + ul.slides {
+#radio-1:checked ~ ul.slides {
     transform: translateX(0);
   }
-  div#radio-2:checked + ul.slides {
+#radio-2:checked ~ ul.slides {
     transform: translateX(-1200px);
+  }
+}
+
+.adresse{
+  margin: 2.5em 0;
+  justify-content: center;
+  gap: 80px;
+  div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    p, a{
+      margin: 0.2em 0;
+      transform: translateX(115px);
+    }
   }
 }
 

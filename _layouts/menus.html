@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<div class="bandeau_pages">
+  {% include prestation.html %}
+</div>
+
+<section class="row center">
+  <div class="column">
+    <ul>
+      {% for s in site.pages %}
+        {% if s.category == page.category %}
+        <li><a href="/{{s.url}}">{{ s.name }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+  <div>
+    {{ content }}
+  </div>
+</section>
+
+{% include reseaux.html %}
