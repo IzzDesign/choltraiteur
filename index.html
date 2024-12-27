@@ -2,18 +2,107 @@
 layout: default
 ---
     <div class="bandeau">
-      <div class="head_title">
+      <div class="head_title column center">
         <img src="/photos/bandeau/logo-bandeau.png" width="400">
-        <h2>Traiteur Artisan</h2>
+        <span>Traiteur Artisan</span>
         <p class="bold">depuis 1999</p>
         <p class="bold">03 80 29 82 67 — 06 71 21 46 93</p>
       </div>
     </div>
     <section>
-      <div class="row index_prestation">
-        <img src="/photos/index/services-professionnels.png" class="img-fluid">
+      <div class="row index_prestation grey">
+        <a href="" class="img-link">
+          <img src="/photos/index/services-particuliers.png" class="img-fluid">
+          <p><span>voir les</span> services particuliers</p>
+        </a>
           {% include prestation.html %}
-        <img src="/photos/index/services-particuliers.png" class="img-fluid">
+        <a href="" class="img-link">
+          <img src="/photos/index/services-professionnels.png" class="img-fluid">
+          <p><span>voir les</span> services professionnels</p>
+        </a>
       </div>
       {% include reseaux.html %}
+      <div class="equipe">
+        <div class="row">
+          <img src="/photos/index/photo-serge.png" class="img-fluid">
+          <div class="column">
+            <h2>Serge</h2>
+            <h4>Le chef</h4>
+            <p>Cela fait 25 ans que je suis derrière les fourneaux et maintenant 5 ans aux commandes de la cuisine de notre entreprise familiale. Ce qui me motive chaque jour, c’est de créer des plats qui racontent une histoire, en alliant les saveurs du terroir et un brin de créativité. Je travaille uniquement avec des produits frais et de saison, car pour moi, la qualité commence par le choix des ingrédients.</p>
+            <p>Le cœur de mon métier, c’est de veiller à ce que chaque plat soit exécuté avec soin. Je suis derrière les fourneaux, supervise les équipes en cuisine et je m’assure que chaque plat qui sort respecte les standards que je me suis fixés. Revisiter les recettes classiques tout en respectant les saveurs d’origine fait partie de l’identité de notre établissement.</p>
+            <p>Je préfère me concentrer sur ce que je fais de mieux : cuisiner et faire en sorte que chaque assiette soit un moment de plaisir pour nos clients.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <h2>Marie</h2>
+            <h4>La cheffe</h4>
+            <p>Originaire de Lyon, j'ai forgé mon amour pour la gastronomie dans cette ville réputée pour sa cuisine. Quelques années après avoir obtenu mon diplôme en management hôtelier, ma rencontre avec Serge a donné un nouveau sens à ma carrière. Nous avons décidé de nous installer dans la plaine de Saône pour reprendre un service de traiteur, un projet qui nous permet d’allier nos forces.</p>
+            <p>Tandis que Serge se consacre à la cuisine, je m’occupe de toute la partie administrative, de la gestion des clients et des relations avec les fournisseurs. Mon rôle est de veiller à ce que tout fonctionne parfaitement en coulisses, pour que l’expérience soit fluide et agréable pour nos clients.</p>
+            <p>Ma formation en management me permet de gérer l’entreprise avec rigueur, tout en laissant Serge exprimer pleinement son talent en cuisine. C’est cette complémentarité qui fait la force de notre entreprise familiale.</p>
+          </div>
+          <img src="/photos/index/photo-marie.png" class="img-fluid">
+        </div>
+        <div class="entreprise">
+          <h2>Choltraiteur</h2>
+          <h4>L'entreprise</h4>
+          <p class="fancy">Bienvenue dans notre établissement,</p>
+          <p>où la passion pour la gastronomie et le service de qualité se conjuguent au quotidien. En tant que couple de gérants, nous avons à cœur de vous offrir une expérience culinaire authentique et conviviale. Forts de notre complicité, nous avons bâti une équipe soudée et talentueuse pour vous garantir des moments savoureux à chaque visite.</p>
+          <p>Dans les coulisses de notre cuisine, notre second de cuisine veille à la qualité et à la créativité des plats, soutenu par nos deux apprentis, qui apportent leur fraîcheur et leur motivation. Ensemble, ils forment une brigade dynamique et engagée, toujours à la recherche de nouvelles inspirations pour ravir vos papilles.</p>
+          <img src="/photos/index/photo-choltraiteur.png" class="img-fluid">
+          <p>Pour accompagner vos repas, notre pâtissière prépare chaque jour des desserts maison, à la fois gourmands et raffinés, pour clôturer vos repas sur une note sucrée inoubliable.</p>
+          <p>Enfin, pour répondre à vos envies où que vous soyez, nos deux livreurs se chargent de vous apporter vos plats préférés directement à domicile, avec le même soin et la même ponctualité qui nous caractérisent.</p>
+          <p>Chez nous, chaque membre de l'équipe est essentiel, et ensemble, nous mettons tout en œuvre pour vous offrir une expérience chaleureuse et délicieuse, en salle comme à emporter.</p>
+        </div>
+      </div>
+      <div class="avis grey">
+        <h3>Ils nous ont fait confiance</h3>
+        <div class="carousel">
+          <div>
+            <input type="radio" name="slides" id="radio-1" checked>
+            <input type="radio" name="slides" id="radio-2">
+          </div>
+          <ul class="slides">
+            <li class="slide">
+              <span class="stars">★★★★★</span>
+              <p>Réunion de famille pour une fête d’anniversaire surprise.</p>
+              <p>Tous les invités se sont unanimement régalés de la paella et des desserts mousses aux fruits. Merci pour la qualité des échanges, vos conseils, la livraison sur le site loué, la location de matériel pour réchauffer le repas. Très pro !
+              Vous avez pleinement contribué à la réussite de cette journée ! Merci.</p>
+              <span class="slide-name">Patrick</span>
+            </li>        
+            <li class="slide">
+                <span class="stars">★★★★★</span>
+                <p>Merci pour la qualité de la prestation, le parfait timing de livraison, et la superbe surprise de la pièce montée personnalisée pour notre mariage !</p>
+                <span class="slide-name">Silwa</span>
+            </li>
+            <li class="slide">
+              <span class="stars">★★★★★</span>
+              <p>Nous avons fait appel au service de ce traiteur, pour le baptême de notre fille Rosie, début juillet. Ils ont parfaitement répondu à nos attentes. Bonne communication et bon repas (des amuses bouches au dessert), que demander de plus ! Nous recommandons, merci !!</p>
+              <span class="slide-name">Stéphanie</span>
+            </li>
+            <li class="slide">
+              <p>
+                4). Explain why you need the loan
+              </p>
+            </li>
+            <li class="slide">
+              <p>
+                4). Explain why you need the loan
+              </p>
+            </li>
+            <li class="slide">
+              <p>
+                4). Explain why you need the loan
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <button class="cta">Devis gratuit</button>
+          <a href="" class="cta-link">Laisser un commentaire</a>
+        </div>
+      </div>
+      <div class="adresse row">
+        <div></div>
+      </div>
     </section>
