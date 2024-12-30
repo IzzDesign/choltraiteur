@@ -7,11 +7,11 @@ layout: default
 </div>
 
 <section class="row center">
-  <div class="column">
+  <div class="column fil-arianne">
     <ul>
       {% for s in site.pages %}
         {% if s.category == page.category %}
-        <li><a href="/{{s.url}}">{{ s.name }}</a></li>
+        <li><a href="/{{s.url}}">{{ s.title }}</a></li>
         {% endif %}
       {% endfor %}
     </ul>

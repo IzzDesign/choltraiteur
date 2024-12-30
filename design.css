@@ -213,6 +213,12 @@ h3{
   font-size: 4em;
 }
 
+h2.h2_menus{
+  font-size: 3em;
+  font-family: var(--font-logo);
+  text-transform: uppercase;
+}
+
 p.fancy{
   font-family: var(--font-fancy);
   font-size: 3em;

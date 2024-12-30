@@ -1,5 +1,19 @@
 ---
 layout: menus
 category: pro
+title: Services Traiteur Professionnels
+hiding: true
+order: 1
 ---
 
+{% for p in site.pages %}
+	{% if p.category == 'pro' and p.hiding != true %}
+		<div class="row center">
+			<div>
+				<h2 class="h2_menus">{{ p.title }}</h2>
+				<p>Découvrez nos {{ p.subtitle }}</p>
+				<a href="" class="cta-link">Je découvre</a>
+			</div>
+		</div>
+	{% endif %}
+{% endfor %}
