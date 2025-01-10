@@ -328,6 +328,7 @@ section{
 .bandeau_pages{
   width: 100%;
   position: relative;
+  min-height:422px;
   &.black_bg{
     background: linear-gradient(to left, var(--black) 45%, transparent 60%);
     .prestation{
@@ -598,7 +599,7 @@ a{
   height: auto;
   box-sizing: border-box;
   padding: 2em;
-  max-width: 400px;
+  max-width: 300px;
   position: relative;
   ul{
     position: sticky;
@@ -668,10 +669,6 @@ a{
       width: 80%;
     }
   }
-}
-
-.row_next{
-  margin-top: 0.4em;
 }
 
 .row_menu:nth-of-type(2n){
