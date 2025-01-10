@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<div class="bandeau_pages black_bg">
+  {% for s in site.pages %}
+    {% if s.name == page.name %}
+    <img src="/photos/{{ s.img_bg }}.png">
+    {% endif %}
+  {% endfor %}
+  
+  {% include prestation.html %}
+</div>
+
+<section class="row menus_group">
+  <div class="column fil-arianne">
+    <ul>
+      {% assign category_p = site.pages | sort: "order" %}
+      {% for s in category_p %}
+        {% if s.category == page.category %}
+        <li><a href="..{{s.url}}" class="link-style {% if s.title == page.title %}active{% endif %}">{{ s.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="column center menus_pro {% if page.hiding != true %}section_menus{%endif%}">
+    {{ content }}
+  </div>
+</section>
+{% include reseaux.html %}

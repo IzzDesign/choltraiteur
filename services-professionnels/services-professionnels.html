@@ -1,19 +1,22 @@
 ---
-layout: menus
+layout: menus-group
 category: pro
 title: Services Traiteur Professionnels
 hiding: true
 order: 1
+img_bg: services-professionnels/services-pro_bg
 ---
 
-{% for p in site.pages %}
-	{% if p.category == 'pro' and p.hiding != true %}
-		<div class="row center">
+{% assign category_pro = site.pages | where: "category", "pro" | sort: "order" %}
+{% for p in category_pro %}
+	{% if p.hiding != true %}
+		<div class="row center row_menu">
 			<div>
-				<h2 class="h2_menus">{{ p.title }}</h2>
+				<h3>{{ p.title }}</h3>
 				<p>Découvrez nos {{ p.subtitle }}</p>
-				<a href="" class="cta-link">Je découvre</a>
+				<a href="..{{ p.url }}" class="cta-link">Je découvre</a>
 			</div>
+			<img src="/photos/services-professionnels/{{ p.img }}.png" width="500">
 		</div>
 	{% endif %}
 {% endfor %}
