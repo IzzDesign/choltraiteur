@@ -27,7 +27,7 @@
   <body>
     <nav class="sub-menu">
       <div class="nav_container">
-        <a href="/" id="logo"><img src="/photos/logo.png" width="220" height="80px"></a>
+        <a href="/" id="logo"><img src="/photos/logo-nav.png" width="229" height="108"></a>
         <a class="nav-btn {% if page.title == 'Choltraiteur' %} active{% endif %}" href="/">Accueil</a>
         <div class="sub-menu-nav particuliers">
           <a href="/services-particuliers/services-particuliers.html" class="nav-btn {% if page.category == 'particuliers' %}active{% endif %}">Services particuliers</a>
@@ -86,23 +86,22 @@
       </div>
       <div>
         <ul>
-          <li><a href="" class="link-style">Service traiteur Particuliers</a></li>
-          <li><a href="" class="link-style">Vin d’honneur</a></li>
-          <li><a href="" class="link-style">Mariage</a></li>
-          <li><a href="" class="link-style">Traiteur</a></li>
-          <li><a href="" class="link-style">Cocktail</a></li>
-          <li><a href="" class="link-style">Boissons</a></li>
-          <li><a href="" class="link-style">Brunch/Buffet</a></li>
-          <li><a href="" class="link-style">Portage de repas</a></li>
+          {% assign category_p = site.pages | sort: "order" %}
+            {% for s in category_p %}
+              {% if s.category == 'particuliers' %}
+              <li><a href="..{{s.url}}" class="link-style">{{ s.title }}</a></li>
+              {% endif %}
+            {% endfor %}
         </ul>
       </div>
       <div>
         <ul>
-          <li><a href="" class="link-style">Service traiteur Professionnels</a></li>
-          <li><a href="" class="link-style">Plateaux repas</a></li>
-          <li><a href="" class="link-style">Repas chaud</a></li>
-          <li><a href="" class="link-style">Café accueil</a></li>
-          <li><a href="" class="link-style">Boissons</a></li>
+          {% assign category_p = site.pages | sort: "order" %}
+            {% for s in category_p %}
+              {% if s.category == 'pro' %}
+              <li><a href="..{{s.url}}" class="link-style">{{ s.title }}</a></li>
+              {% endif %}
+            {% endfor %}
         </ul>
       </div>
       <img src="/photos/footer/decoration.png" width="100" class="footer-img">

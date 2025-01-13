@@ -27,7 +27,7 @@ footer, header, hgroup, menu, nav, section {
 body {
   line-height: 1;
 }
-ol, ul {
+ul {
   list-style: none;
 }
 blockquote, q {
@@ -116,15 +116,11 @@ nav{
     justify-content: space-between;
     align-items: center;
     max-width: 1400px;
-    overflow: hidden;
   }
 }
 
 .sub-menu #logo{
-  transform: translateY(10px);
-  img{
-    width: 220px;
-  }
+  transform: translateY(25px);
 }
 
 .sub-menu{
@@ -227,6 +223,10 @@ h2{
   font-size: 4em;
 }
 
+.bold{
+  font-weight: 600;
+}
+
 h3{
   font-size: 3em;
   font-family: var(--font-logo);
@@ -280,6 +280,12 @@ p.p_title{
 .row{
   display: flex;
   flex-direction: row;
+}
+
+.row-wrap{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .column{
@@ -540,7 +546,7 @@ a{
   .slides{
     display: flex;
     list-style: none;
-    width: 2400px;
+    width: 3600px;
     position: relative;
     left: 0;
     gap: 20px;
@@ -552,13 +558,14 @@ a{
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-start;
+      justify-content: space-between;
       background-color: white;
       border-radius: 5px;
       padding: 1.5em;
       width: 340px;
       position: relative;
       float: left;
+      height: 340px;
       span.stars{
         font-size: 1.5em;
       }
@@ -570,12 +577,29 @@ a{
   }
   input[type=radio]{
     order: 2;
+    appearance: none;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #999;
+    transition: 0.2s all linear;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    &:checked{
+      border: 6px solid black;
+    }
+    &#radio-1{
+      margin-left: 48%;
+    }
   }
 #radio-1:checked ~ ul.slides {
     transform: translateX(0);
   }
 #radio-2:checked ~ ul.slides {
     transform: translateX(-1200px);
+  }
+#radio-3:checked ~ ul.slides {
+    transform: translateX(-2400px);
   }
 }
 
@@ -627,34 +651,46 @@ a{
 }
 
 .section_menus{
-  max-width: 900px;
+  max-width: 1000px;
+  box-sizing: border-box;
   margin: 2em 0 0 2em;
+  row-gap: 30px;
   h2{
-    margin: 0.5em 0;
+    margin: 0.3em 0;
   }
   .row, .column{
     width: 100%;
-    gap: 5px;
+    gap: 15px;
+  }
+  .row-wrap{
+    gap: 15px;
   }
   .row{
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    gap: 30px;
   }
   img{
     object-fit: cover;
   }
   p{
-    font-size: 1.1em;
     margin: 0.3em 0 0.4em 0;
   }
   p.p_title{
     font-size: 1.5em;
   }
+  ul{
+    min-width: 400px;
+  }
+  ol li{
+    margin: 0.5em 0;
+  }
   ul li{
-    font-size: 1em;
+    font-size: 1.1em;
     text-align: center;
-    margin: 0.4em 0;
+    margin: 0.5em 0;
+    &.bold{
+      font-size: 1.2em;
+    }
   }
 }
 
@@ -677,7 +713,12 @@ a{
   }
 }
 
-
+.menu_ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 45%;
+}
 
 .menu_intro{
   margin: 1em 0;
@@ -686,6 +727,9 @@ a{
     font-weight: 600;
     width: 80%;
     margin: 0.5em 0;
+  }
+  p.fancy{
+    font-size: 1.8em;
   }
   img{
     object-fit: cover;
@@ -786,7 +830,7 @@ footer a.link-style::before, a .link-style::before{
   background-color: var(--black);
 }
 
-footer a.link-style, a.link-style, .fil-arianne a{
+footer a.link-style, a .link-style, .fil-arianne a{
   position: relative;
   &::before {
     content: '';
@@ -859,68 +903,22 @@ a.link-style.active::before{
   margin-top: 0;
 }
 
-label{padding-bottom: 0.5em;}
-
-.button{
-  background-color: #202d32;
-  color: white;
-  text-transform: uppercase;
-  font-size: 1.6em;
-  padding: 0.4em 1em 0.2em 1em;
-  border: none;
-  float: right;
-}
-
-.pdf{
-  font-size: 1.2em;
-  padding: 0.4em 1em 0.4em 1em;
-  margin: 0 auto;
-  margin-bottom: 1em;
-  text-align: center;
-  font-family: "garagegothicbold";
-}
-
 @media screen and (max-width: 1795px) {
-  .contactboutique{margin-top: 2em;}
+
 }
 
 @media screen and (max-width: 1395px) {
-  footer{width: 100%}
-  .navbar{width: 100%;}
-  .bg{
-    background-size: 100%;
-    min-height: 100px;
-  }
-  #menu{width: 80%;}
-  .contactboutique{margin-top: 1em;}
+  
 }
 
 @media screen and (max-width: 991px) {
-  p.short{line-height: 25px;}
-  #menu{margin-bottom: 3em;}
-  .menu span{display: none;}
-  .section{margin-top: 3em;margin-bottom: 2em;}
-  .carousel{margin-top: 2em;}
-  h3{margin-top: 2em;}
+ 
 }
 
 @media screen and (max-width: 800px) {
-   .bg{
-    background-image: url('/photos/chol2.jpg');
-    background-size: 50%;
-    height: 400px;
-  }
-  h2{font-size: 1.7em;}
-  .menu{font-size: 1.4em;}
-  .navbar{padding: 0;}
+
 }
 
 @media screen and (max-width: 400px) {
-  .bg{
-    background-size: 100%;
-  }
-  h2{font-size: 1.5em;}
-  .menu{font-size: 1.5em;}
-  #menu h2{font-size: 1.2em;}
-  h3{margin-top: 0.8em;}
+
 }
