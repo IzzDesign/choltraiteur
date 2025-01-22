@@ -20,7 +20,7 @@ layout: menus-group
   {% for p in site.pages %}
     {% if p.title == page.next %}
     <div class="row center row_next">
-      <img src="/photos/services-particuliers/{{ p.img }}.png" width="500">
+      <img src="/photos/{% if p.category == 'pro' %}services-professionnels{% else %}services-particuliers{% endif %}/{{ p.img }}.png" width="500">
       <div>
         <h3>{{ p.title }}</h3>
         <p>Découvrez nos {{ p.subtitle }}</p>

@@ -639,9 +639,10 @@ a{
   ul li:first-child{
     margin-bottom: 2em;
     a{
-      font-size: 2em;
+      font-size: 1.3em;
       font-family: var(--font-logo);
       text-align: center;
+      text-transform: uppercase;
     }
   }
 }
@@ -691,6 +692,17 @@ a{
     &.bold{
       font-size: 1.2em;
     }
+  }
+}
+
+.section_menus ul.ul-with-titles li:nth-child(2n+1){
+  font-family: var(--font-logo);
+  text-transform: uppercase;
+  font-size: 1.3em;
+  span{
+    font-family: var(--font-text);
+    width: 100%;
+    font-size: 0.5em;
   }
 }
 
