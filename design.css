@@ -521,13 +521,15 @@ button.cta.cta_white{
   flex-direction: column;
   max-width: 1200px;
   align-self: center;
-  .row{
+  .row-wrap{
     gap: 30px;
     padding: 0 1em 0 2em;
     margin-top: 1em;
     img{
-      width: 520px;
-      height: 520px;
+      width: 100%;
+      max-width: 420px;
+      max-height: 420px;
+      height: auto;
     }
     h2{
       text-align: left;
@@ -754,7 +756,8 @@ a{
     h3{
       margin: 0.1em 0;
     }
-    max-width: 426px;
+    width: 100%;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
