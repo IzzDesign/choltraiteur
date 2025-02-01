@@ -216,6 +216,8 @@ h1{
 h2{
   font-family: var(--font-fancy);
   font-size: 5em;
+  width: 100%;
+  text-align: center;
 }
 
 .little{
@@ -318,14 +320,20 @@ ol li{
   align-items: center;
 }
 
-.img-fluid{
+.row, .column, .row-wrap{
   width: 100%;
 }
+.column.wd-50{
+  width: 50%;
+}
 
-section{
-  .menus_group{
-    position: relative;
-  }
+.img-fluid{
+  max-width: 100%;
+}
+
+section.menus_group{
+  position: relative;
+  justify-content: center;
 }
 
 .bandeau{
@@ -355,6 +363,7 @@ section{
   width: 100%;
   position: relative;
   min-height:422px;
+  overflow: hidden;
   &.black_bg{
     background: linear-gradient(to left, var(--black) 45%, transparent 60%);
     .prestation{
@@ -644,6 +653,7 @@ a{
   box-sizing: border-box;
   padding: 2em;
   max-width: 300px;
+  min-width: 250px;
   position: relative;
   ul{
     position: sticky;
@@ -670,10 +680,12 @@ a{
 
 .menus_pro{
   position: relative;
+  max-width: 1000px;
 }
 
 .section_menus{
   max-width: 1000px;
+  min-width: 600px;
   box-sizing: border-box;
   margin: 2em 0 0 2em;
   row-gap: 15px;
@@ -682,15 +694,6 @@ a{
   }
   h3{
     margin: 0.5em 0;
-  }
-  .row, .column, .row-wrap{
-    width: 100%;
-  }
-  .column.wd-50{
-    width: 50%;
-  }
-  .row-wrap{
-    gap: 15px;
   }
   .row{
     justify-content: space-evenly;
@@ -748,7 +751,10 @@ a{
 
 .row_menu, .row_next{
   div{
-    width: 500px;
+    h3{
+      margin: 0.1em 0;
+    }
+    max-width: 426px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -769,7 +775,7 @@ a{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 45%;
+  width: 50%;
 }
 
 .menu_intro{
@@ -785,6 +791,7 @@ a{
   }
   img{
     object-fit: cover;
+    max-width: 100%;
   }
 }
 
@@ -959,12 +966,22 @@ a.link-style.active::before{
 
 }
 
-@media screen and (max-width: 1395px) {
-  
+@media screen and (max-width: 1100px) {
+  .fil-arianne{
+    display: none;
+  }
+  .bandeau_pages{
+    width: 100%;
+  }
+  .section_menus{
+    margin: 2em 0;
+  }
 }
 
-@media screen and (max-width: 991px) {
- 
+@media screen and (max-width: 900px) {
+ h1{
+  font-size: 4em;
+ }
 }
 
 @media screen and (max-width: 800px) {
