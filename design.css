@@ -237,10 +237,16 @@ h3{
 }
 
 h4{
-  font-size: 1.8em;
-  font-family: var(--font-logo);
+  font-size: 1.5em;
+  font-family: 'Roboto Condensed';
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  margin-top: 0.5em;
+}
+
+h5{
+  font-size: 1em;
+  font-family: 'Roboto Condensed';
+  text-transform: uppercase;
 }
 
 p.fancy{
@@ -265,6 +271,10 @@ p.bold{
   font-weight: 700;
 }
 
+p.medium_p{
+  font-size: 1.2em;
+}
+
 p.big_p{
   font-size: 2em;
 }
@@ -281,6 +291,10 @@ p.p_subtitle{
   font-style: italic;
   margin: 0.1em 0;
   font-weight: 600;
+}
+
+ol li{
+  font-size: 1.2em;
 }
 
 .row{
@@ -645,8 +659,9 @@ a{
   ul li:first-child{
     margin-bottom: 2em;
     a{
-      font-size: 1.3em;
-      font-family: var(--font-logo);
+      font-size: 1em;
+      font-family: 'Roboto Condensed';
+      font-weight: 900;
       text-align: center;
       text-transform: uppercase;
     }
@@ -665,8 +680,14 @@ a{
   h2{
     margin: 0.3em 0;
   }
-  .row, .column{
+  h3{
+    margin: 0.5em 0;
+  }
+  .row, .column, .row-wrap{
     width: 100%;
+  }
+  .column.wd-50{
+    width: 50%;
   }
   .row-wrap{
     gap: 15px;
@@ -674,6 +695,12 @@ a{
   .row{
     justify-content: space-evenly;
     align-items: center;
+  }
+  .column_img{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
   }
   img{
     object-fit: cover;
@@ -687,15 +714,22 @@ a{
   ul{
     min-width: 400px;
   }
+  ol{
+    width: 50%;
+  }
   ol li{
     margin: 0.5em 0;
+    font-size: 1.2em;
+    line-height: 1.3em;
   }
   ul li{
     font-size: 1.1em;
     text-align: center;
     margin: 0.5em 0;
-    &.bold{
-      font-size: 1.2em;
+    &.li_title{
+      font-family: var(--font-logo);
+      text-transform: uppercase;
+      font-size: 1.3em;
     }
   }
 }
@@ -704,6 +738,7 @@ a{
   font-family: var(--font-logo);
   text-transform: uppercase;
   font-size: 1.3em;
+  line-height: 1.3em;
   span{
     font-family: var(--font-text);
     width: 100%;
@@ -741,7 +776,7 @@ a{
   margin: 1em 0;
   p{
     font-size: 1.2em;
-    font-weight: 600;
+    font-weight: 400;
     width: 80%;
     margin: 0.5em 0;
   }
