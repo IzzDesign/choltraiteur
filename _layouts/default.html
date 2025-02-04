@@ -57,6 +57,38 @@
         <button class="cta">Devis gratuit</button>
       </div>
     </nav>
+
+    <nav class="phone">
+      <div id="menuToggle">
+        <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+      <div id="menu">
+        <div>
+          <a href="/services-particuliers/services-particuliers.html" class="nav-btn {% if page.category == 'particuliers' %}active{% endif %}">Services particuliers</a>
+          <ul>
+            {% assign category_p = site.pages | sort: "order" %}
+            {% for s in category_p %}
+              {% if s.category == 'particuliers' and s.hiding != true %}
+              <li><a href="..{{s.url}}">{{ s.title }}</a></li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+        <div>
+          <a href="/services-professionnels/services-professionnels.html" class="nav-btn {% if page.category == 'pro' %}active{% endif %}">Services professionnels</a>
+            <ul>
+              {% assign category_p = site.pages | sort: "order" %}
+              {% for s in category_p %}
+                {% if s.category == 'pro' and s.hiding != true %}
+                <li><a href="..{{s.url}}">{{ s.title }}</a></li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+      </div>
+     </div>
+    </nav>
     
 {{ content }}
     <div class="contact column center grey">
