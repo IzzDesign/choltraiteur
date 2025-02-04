@@ -346,6 +346,7 @@ section.menus_group{
   background-position: center center;
   background-repeat: no-repeat;
   background-image: url('/photos/bandeau/bandeau-accueil.png');
+  background-size: 100%;
   color: white;
   p{
     font-size: 1.5em;
@@ -448,7 +449,7 @@ section.menus_group{
 
 .prestation{
   display: flex;
-  width: 40%;
+  width: 25%;
   p{
     margin: 0.2em 0;
   }
@@ -983,6 +984,13 @@ a.link-style.active::before{
   text-align: left;
   line-height: 1.2em;
   margin-top: 0;
+}
+
+@media screen and (max-width: 1243px) {
+  .index_prestation .prestation{
+    order: 1;
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 1342px) {
