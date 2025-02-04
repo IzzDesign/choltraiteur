@@ -6,7 +6,7 @@ a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
-dl, dt, dd, ul,
+dl, dt, dd,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
@@ -28,6 +28,7 @@ body {
 }
 ul {
   list-style: none;
+  padding: 0;
 }
 blockquote, q {
   quotes: none;
@@ -1071,6 +1072,9 @@ a.link-style.active::before{
  h2{
   font-size: 3em;
  }
+ .little{
+  font-size: 2em;
+ }
  h3{
   font-size: 2em;
  }
@@ -1150,6 +1154,17 @@ a.link-style.active::before{
 }
 
 @media screen and (max-width: 640px) {
+  .section_menus{
+    min-width: 200px;
+  }
+  .img-fluid{
+    width: 100%;
+    margin: 0 auto;
+  }
+  .row_menu_group{
+    width: 98%;
+    margin: 0 auto;
+  }
   .reseaux.row-wrap{
     flex-direction: column;
     align-items: center;
@@ -1175,6 +1190,10 @@ a.link-style.active::before{
 
 @media screen and (max-width: 600px) {
   .bandeau_pages{
+    img{
+      width: 900px;
+      height: auto;
+    }
     &.black_bg{
       background: none;
       & .prestation{
