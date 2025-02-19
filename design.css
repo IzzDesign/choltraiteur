@@ -1,4 +1,5 @@
 ---
+hiding: true
 ---
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -41,6 +42,11 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+a:hover{
+  text-decoration: none;
+  color: unset;
 }
 /*Fin du reset*/
 
@@ -109,7 +115,7 @@ nav.sub-menu{
   display: flex;
   justify-content: center;
   font-weight: 700;
-  width: 98%;
+  width: 100%;
   height: 70px;
   position: sticky;
   top: 0;
@@ -527,11 +533,16 @@ button.cta.cta_white{
   box-sizing: border-box;
   justify-content: space-around;
   padding: 1em 3em;
+  gap: 10px;
   .row{
     gap: 20px;
     justify-content: center;
     align-items: center;
-    width: max-content;
+    min-width: 190px;
+    width: fit-content;
+    &:nth-child(4){
+      min-width: 275px;
+    }
     a{
       display: flex;
       gap: 10px;
@@ -554,6 +565,9 @@ button.cta.cta_white{
   flex-direction: column;
   max-width: 1200px;
   align-self: center;
+  .column{
+    width: 45%;
+  }
   .row-wrap{
     gap: 30px;
     padding: 0 1em 0 2em;
@@ -626,16 +640,19 @@ a{
       background-color: white;
       border-radius: 5px;
       padding: 1.5em;
-      width: 340px;
+      width: 380px;
       position: relative;
       float: left;
-      height: 340px;
+      height: 360px;
       span.stars{
         font-size: 1.5em;
       }
       span.slide-name{
         font-size: 1.2em;
         font-weight: bold;
+      }
+      p{
+        margin: 0.2em 0;
       }
     }
   }
@@ -1021,6 +1038,124 @@ a.link-style.active::before{
   margin-top: 0;
 }
 
+/*Pop up*/
+.modal-dialog{
+  max-width: 800px;
+}
+
+.modal-body{
+  padding: 0 3rem;
+  textarea{
+    width: 100%;
+    margin: 1em 0;
+  }
+}
+
+.modal-header{
+  border-bottom: none;
+  padding: 2rem 2rem 0 3rem;
+  h3{
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.modal-footer{
+  border-top: none;
+  text-align: center;
+  justify-content: center;
+}
+
+.modal-title{font-size: 2em;}
+.close{font-size: 2em;}
+
+.form-group{
+  margin: 0.8em 0;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#contactForm{
+  .row-wrap{
+    gap: 10px;
+    justify-content: center;
+  }
+}
+
+  .fa{
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+
+.form-check{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0;
+  width: 25%;
+  gap: 5px;
+  height: auto;
+  min-width: 180px;
+  min-height: 140px;
+  label{
+    line-height: 1em;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Gelasio', serif;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1em;
+    gap: 5px;
+    height: 100%;
+    font-size: 1.2em;
+    pointer-events: none;
+    border: 1px solid black;
+    transition: all 0.4s ease-in;
+  }
+}
+
+.form-control{
+  padding-left: 0.5em;
+  margin: 0.2em;
+  &:nth-child(-n + 2){
+    width: 49%;
+  }
+  &:focus{
+    box-shadow: 0 0 0 .2rem $color-violet;
+  }
+}
+
+input[type="checkbox"]{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -border-radius: 4px;
+  height: 100%;
+  width: 100%;
+  line-height: 1.6em;
+  position: inherit;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:focus {
+  outline: none;
+}
+
+input[type="checkbox"]:checked {
+  ~ label{
+    background: black;
+  }
+  ~ label span{
+    color: white;
+  }
+}
+
 @media screen and (max-width: 1800px) {
   .bandeau{
     height: 600px;
@@ -1176,6 +1311,11 @@ a.link-style.active::before{
     width: 70%;
     min-width: auto;
   }
+  .form-control {
+    &:nth-child(-n+2) {
+      width: 100%;
+    }
+  }
 }
 
 @media screen and (max-width: 675px) {
@@ -1224,6 +1364,9 @@ a.link-style.active::before{
   .equipe .entreprise{
     columns: 1;
   }
+  .carousel input[type="radio"]#radio-1{
+    margin-left: 40%;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -1254,7 +1397,6 @@ a.link-style.active::before{
       }
     }
   }
-
   .reseaux{
     padding: 1em 0.5em;
     .row{
@@ -1266,6 +1408,9 @@ a.link-style.active::before{
   }
   .grey{
     padding: 1em;
+  }
+  .equipe .column{
+    width: 98%;
   }
 
   nav.sub-menu{
@@ -1397,7 +1542,31 @@ a.link-style.active::before{
 
 @media screen and (max-width: 420px) {
   .carousel .slides li.slide{
-    min-width: 340px;
     width: 95%;
+  }
+}
+
+@media screen and (max-width: 365px) {
+  .carousel{
+    width: 300px;
+    &.slides{
+      width: 2700px;
+    }
+  }
+  .carousel .slides li.slide{
+    max-width: 300px;
+    min-width: 300px;
+    min-height: 440px;
+  }
+  .carousel{
+    #radio-1:checked ~ ul.slides {
+      transform: translateX(0);
+    }
+    #radio-2:checked ~ ul.slides {
+      transform: translateX(-320px);
+    }
+    #radio-3:checked ~ ul.slides {
+      transform: translateX(-640px);
+    }
   }
 }
