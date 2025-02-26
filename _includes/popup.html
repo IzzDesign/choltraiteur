@@ -26,8 +26,8 @@
               {% for s in category_p %}
                 {% if s.hiding != true %}
                 <div class="form-check">
-                  <input class="" type="checkbox" value="menuiseries" id="menuiseries" name="interests">
-                  <label class="form-check-label" for="menuiseries">
+                  <input class="" type="checkbox" value="{{ s.name|downcase }}" id="{{ s.name|downcase }}" name="interests">
+                  <label class="form-check-label" for="{{ s.name|downcase}}">
                     <span>{{ s.title }}</span>
                     <img src="/photos/{% if s.category == 'pro' %}services-professionnels{% else %}services-particuliers{% endif %}/{{ s.img }}.png" width="180">
                   </label>
@@ -35,7 +35,7 @@
                 {% endif %}
               {% endfor %}
             </div>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" cols="20" name="message" placeholder="Message"></textarea>
+          <textarea class="form-control" id="message-body" rows="5" cols="20" name="message-body" placeholder="Message"></textarea>
         </div>
           <div class="modal-footer">
             <input type="submit" class="cta" value="Envoyer" />

@@ -93,7 +93,7 @@
       </div>
      </div>
     </nav>
-    
+
 {{ content }}
     <div class="contact column center grey">
       <h2>Contact</h2>
@@ -152,8 +152,46 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    {% if include.with_contact_script %}
-      {% include script.html %}
-    {% endif %}
+    <script>
+      $(document).ready(function () {
+        $("#contactform").submit(function (e) {
+          $("#protection").val(2);
+          var values = $(this).serializeArray();
+          var message = `Message de ${$("#name").val()} (${$("#phone").val()})`;
+          message +=
+            "\n\nIntérêts : " +
+            values
+              .filter((v) => v.name === "interests")
+              .map((v) => v.value)
+              .join(", ");
+
+          message += $("#message-body").val();
+          $("#message").val(message);
+
+          e.preventDefault();
+          $("#contactform .success").hide();
+          $("#contactform .error").hide();
+
+          var form = $(this);
+          var url = form.attr("action");
+
+          $.ajax({
+            type: "POST",
+            url: url,
+            crossDomain: true,
+            data: form.serialize(), // serializes the form's elements.
+            success: function (data) {
+              console.log("Form success", data);
+              $("#contactform .success").show(200);
+            },
+            error: function (xhr, status, c) {
+              console.log(xhr.responseText);
+              console.log("Form error", xhr, "####", status, "####", c);
+              $("#contactform .error").show(200);
+            },
+          });
+        });
+      });
+    </script>
   </body>
 </html>
