@@ -97,13 +97,13 @@
 {{ content }}
     <div class="contact column center grey">
       <h2>Contact</h2>
-      <form action="https://neamar.fr/email.php" method="POST" id="contactform" onsubmit="document.getElementById('protection').value = 2"/>
+      <form action="https://neamar.fr/email.php" method="POST" id="contactform" />
         <input type="hidden" name="protection" id="protection" value="1" />
         <p>Pour une demande de devis, n'hésitez pas à préciser : le nombre de convives, la date, si besoin de vaisselle et/ou de serveurs ainsi que vos coordonnées.</p>
         <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email" name="_replyto">
         <input type="hidden" name="_subject" value="Contact choltraiteur.fr" />
         <textarea class="form-control" id="exampleFormControlTextarea1" rows="12" name="message"></textarea>
-        <input type="hidden" name="_to" value="contact@choltraiteur.fr" />
+        <input type="hidden" name="_to" value="neamar@neamar.fr" />
         <input class="button" type="submit" value="Envoyer">
         <div class="info success">
           Votre message a bien été envoyé
@@ -154,8 +154,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script>
       $(document).ready(function () {
-        $("#contactform").submit(function (e) {
-          $("#protection").val(2);
+        $("#popupform").submit(function (e) {
+          $("#popupform #protection").val(2);
           var values = $(this).serializeArray();
           var message = `Message de ${$("#name").val()} (${$("#phone").val()})`;
           message +=
@@ -165,12 +165,12 @@
               .map((v) => v.value)
               .join(", ");
 
-          message += $("#message-body").val();
+          message += "\n\n" + $("#message-body").val();
           $("#message").val(message);
 
           e.preventDefault();
-          $("#contactform .success").hide();
-          $("#contactform .error").hide();
+          $("#contactModal .success").hide();
+          $("#contactModal .error").hide();
 
           var form = $(this);
           var url = form.attr("action");
@@ -179,7 +179,30 @@
             type: "POST",
             url: url,
             crossDomain: true,
-            data: form.serialize(), // serializes the form's elements.
+            data: form.serialize(),
+            success: function (data) {
+              console.log("Form success", data);
+              $("#contactModal .success").show(200);
+            },
+            error: function (xhr, status, c) {
+              console.log(xhr.responseText);
+              console.log("Form error", xhr, "####", status, "####", c);
+              $("#contactModal .error").show(200);
+            },
+          });
+        });
+
+        $("#contactform").submit(function (e) {
+          $("#contactform #protection").val(2);
+          e.preventDefault();
+
+          var form = $(this);
+          var url = form.attr("action");
+          $.ajax({
+            type: "POST",
+            url: url,
+            crossDomain: true,
+            data: form.serialize(),
             success: function (data) {
               console.log("Form success", data);
               $("#contactform .success").show(200);
