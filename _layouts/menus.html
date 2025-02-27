@@ -1,0 +1,32 @@
+---
+layout: menus-group
+---
+
+<h1>{{ page.title }}</h1>
+{{content}}
+
+<div class="column">
+  <div class="row-wrap reseaux">
+  <div class="column wd-50 center">
+    <p class="p_title">Nous appeler :</p>
+    <p>03 80 29 82 67 — 06 71 21 46 93</p>
+  </div>
+  <div class="column wd-50 center">
+    <p class="p_title">faire une demande de :</p>
+    <button type="button" class="cta cta_white" data-toggle="modal" data-target="#contactModal">Devis gratuit</button>
+  </div>
+</div>
+
+  {% for p in site.pages %}
+    {% if p.title == page.next %}
+    <div class="row-wrap row_next">
+      <img src="/photos/{% if p.category == 'pro' %}services-professionnels{% else %}services-particuliers{% endif %}/{{ p.img }}.png" width="426">
+      <div class="column wd-50">
+        <h3>{{ p.title }}</h3>
+        <p>Découvrez nos {{ p.subtitle }}</p>
+        <a href="..{{ p.url }}" class="cta-link">Je découvre</a>
+      </div>
+    </div>
+    {% endif %}
+  {% endfor %}
+</div>

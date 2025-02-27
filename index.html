@@ -1,48 +1,143 @@
 ---
-
+layout: default
+title: Choltraiteur
+hiding: true
 ---
-    {% include head.html %}
-    <div class="bg"></div>
-    <div class="container">
-      <div class="title">
-        <h1>Chol Traiteur</h1>
-        <span>20 ans d'expérience à vos côtés</span>
-      </div>
-      <h2><span><img src="span.svg"></span>Qui sommes nous<span><img src="span.svg"></span></h2>
-        <div class="row text-center">
-          <div class="col-lg-4 offset-lg-1">
-            <img src="/photos/serge.jpg" class="profil img-responsive" alt="photo de Serge" title="photo de Serge">
-            <h3><span><img src="span.svg"></span>Serge<span><img src="span.svg"></span></h3>
-              <p>Serge a 35 ans, et <b>la cuisine, c’est l’histoire de sa vie&nbsp;!</b> A 16 ans il commence son apprentissage et depuis, cette passion ne l’a jamais vraiment quitté.<p>
-
-             <p>Il poursuit sa carrière chez Gilda Traiteur et touche à tout&nbsp;:&nbsp;<b>commis, pâtissier, maître d’apprentissage et chef cuisinier,</b> bref il sait tout faire&nbsp;!</p>
-
-             <p>20 ans plus tard, il a rajouté quelques autres activités à son profil, en tant qu’extras&nbsp;:&nbsp;<b>professeur au CFA La Noue, cuisinier à la Flambée, entre autres, et chef de rang au restaurant gastronomique de l’Hôtel Golf Château de Chailly.</b></p>
-
-             <p>Alors, c’est tout naturellement qu’il reprend l’entreprise qu’il connait si bien, et qu’il faisait déjà tourner depuis quelques années, avec celle qui partage maintenant sa vie.</p>
-          </div>
-          <div class="col-lg-4 offset-lg-2">
-            <img src="/photos/marie.jpg" class="profil img-responsive" alt="photo de Marie" title="photo de Marie">
-            <h3><span><img src="span.svg"></span>Marie<span><img src="span.svg"></span></h3>
-              <p class="short">Après 5 années d’études à Vatel à Lyon en management hôtelier international, où elle travaille notamment chez Jacques Chibois à Grasse, à la Palme d’Or à Cannes et chez Emmanuel Renault à Megève, Marie décide de partir travailler en Australie pendant un an, car elle s’est découvert pendant ses études une vraie passion pour le voyage. Pas moins de 17 pays au compteur, qu’elle a visité pour le travail ou en sac à dos avec des amies.<p>
-
-              <p class="short">Fin 2014 quand elle rentre, son frère a ouvert le premier food truck de Bourgogne et elle le rejoint pour l’aider, en cherchant du travail à côté, dans cette région qui est depuis devenue sa region de cœur.</p>
-
-              <p class="short">Marie rentre à l’Hôtel Golf Château de Chailly en 2015 en tant que <b>coordinatrice séminaires et banquets</b> et gravira les échelons pour devenir en 2017, <b>responsable commercial et communication de l’ensemble de la structure.</b></p>
-
-              <p class="short">Fin 2018, un projet fou se dessine, reprendre une entreprise avec l’homme qui partage sa vie, alors pourquoi pas&nbsp;?</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-8 offset-lg-2 bottom">
-          <h3><span><img src="span.svg"></span>Nous<span><img src="span.svg"></span></h3>
-          <p>Nous avons eu un <b>coup de foudre professionnel (et pas que&nbsp;!)</b> et c’est tout naturellement que nous avons décidé de se lancer ensemble dans cette folle aventure&nbsp;!</p>
-
-          <p>Nous sommes une entreprise <b>familiale et artisanale, toujours à l’écoute de notre clientèle.</b></p>
-
-          <p>Depuis le 15 mars 2019, nous nous sommes jetés à corps perdu dans cette entreprise avec comme idée principale&nbsp;:&nbsp;<b>toujours la satisfaction de nos clients.</b></p>
-        </div>
+    <div class="bandeau">
+      <div class="head_title column center">
+        <img src="/photos/bandeau/logo-bandeau.png" width="400">
+        <p class="bold">depuis 1999</p>
+        <p class="bold">03 80 29 82 67 — 06 71 21 46 93</p>
       </div>
     </div>
-
-  {% include footer.html %}
+    <section class="column center">
+      <div class="row-wrap center index_prestation grey">
+        <a href="/services-particuliers/services-particuliers.html" class="img-link">
+          <img src="/photos/index/services-particuliers.png" class="img-fluid">
+          <p><span>voir les</span> services particuliers</p>
+        </a>
+          {% include prestation.html %}
+        <a href="/services-professionnels/services-professionnels.html" class="img-link">
+          <img src="/photos/index/services-professionnels.png" class="img-fluid">
+          <p><span>voir les</span> services professionnels</p>
+        </a>
+      </div>
+      {% include reseaux.html %}
+      <div class="equipe">
+        <div class="row-wrap center">
+          <img src="/photos/index/photo-serge.png" width="594" height="658">
+          <div class="column">
+            <h2>Serge</h2>
+            <h4>Le chef</h4>
+            <p>Cela fait 25 ans que je suis derrière les fourneaux et maintenant 5 ans aux commandes de la cuisine de notre entreprise familiale. Ce qui me motive chaque jour, c’est de créer des plats qui racontent une histoire, en alliant les saveurs du terroir et un brin de créativité. Je travaille uniquement avec des produits frais et de saison, car pour moi, la qualité commence par le choix des ingrédients.</p>
+            <p>Le cœur de mon métier, c’est de veiller à ce que chaque plat soit exécuté avec soin. Je suis derrière les fourneaux, supervise les équipes en cuisine et je m’assure que chaque plat qui sort respecte les standards que je me suis fixés. Revisiter les recettes classiques tout en respectant les saveurs d’origine fait partie de l’identité de notre établissement.</p>
+            <p>Je préfère me concentrer sur ce que je fais de mieux : cuisiner et faire en sorte que chaque assiette soit un moment de plaisir pour nos clients.</p>
+          </div>
+          <div class="column">
+            <h2>Marie</h2>
+            <h4>La cheffe</h4>
+            <p>Originaire de Lyon, j'ai forgé mon amour pour la gastronomie dans cette ville réputée pour sa cuisine. Quelques années après avoir obtenu mon diplôme en management hôtelier, ma rencontre avec Serge a donné un nouveau sens à ma carrière. Nous avons décidé de nous installer dans la plaine de Saône pour reprendre un service de traiteur, un projet qui nous permet d’allier nos forces.</p>
+            <p>Tandis que Serge se consacre à la cuisine, je m’occupe de toute la partie administrative, de la gestion des clients et des relations avec les fournisseurs. Mon rôle est de veiller à ce que tout fonctionne parfaitement en coulisses, pour que l’expérience soit fluide et agréable pour nos clients.</p>
+            <p>Ma formation en management me permet de gérer l’entreprise avec rigueur, tout en laissant Serge exprimer pleinement son talent en cuisine. C’est cette complémentarité qui fait la force de notre entreprise familiale.</p>
+          </div>
+          <img src="/photos/index/photo-marie.png" width="594" height="658">
+        </div>
+        <div class="entreprise">
+          <h2>Choltraiteur</h2>
+          <h4>L'entreprise</h4>
+          <p class="fancy">Bienvenue dans notre établissement,</p>
+          <p>où la passion pour la gastronomie et le service de qualité se conjuguent au quotidien. En tant que couple de gérants, nous avons à cœur de vous offrir une expérience culinaire authentique et conviviale. Forts de notre complicité, nous avons bâti une équipe soudée et talentueuse pour vous garantir des moments savoureux à chaque visite.</p>
+          <p>Dans les coulisses de notre cuisine, notre second de cuisine veille à la qualité et à la créativité des plats, soutenu par nos deux apprentis, qui apportent leur fraîcheur et leur motivation. Ensemble, ils forment une brigade dynamique et engagée, toujours à la recherche de nouvelles inspirations pour ravir vos papilles.</p>
+          <img src="/photos/index/photo-choltraiteur.png" class="img-fluid">
+          <p>Pour accompagner vos repas, notre pâtissière prépare chaque jour des desserts maison, à la fois gourmands et raffinés, pour clôturer vos repas sur une note sucrée inoubliable.</p>
+          <p>Enfin, pour répondre à vos envies où que vous soyez, nos deux livreurs se chargent de vous apporter vos plats préférés directement à domicile, avec le même soin et la même ponctualité qui nous caractérisent.</p>
+          <p>Chez nous, chaque membre de l'équipe est essentiel, et ensemble, nous mettons tout en œuvre pour vous offrir une expérience chaleureuse et délicieuse, en salle comme à emporter.</p>
+        </div>
+      </div>
+      <div class="avis grey">
+        <h2>Ils nous ont fait confiance</h2>
+        <div class="carousel">
+          <input type="radio" name="slides" id="radio-1" checked>
+          <input type="radio" name="slides" id="radio-2">
+          <input type="radio" name="slides" id="radio-3">
+          <ul class="slides">
+            <li class="slide">
+              <span class="stars">★★★★★</span>
+              <p>Réunion de famille pour une fête d’anniversaire surprise. Tous les invités se sont unanimement régalés de la paella et des desserts mousses aux fruits. Merci pour la qualité des échanges, vos conseils, la livraison sur le site loué, la location de matériel pour réchauffer le repas. Très pro ! Vous avez pleinement contribué à la réussite de cette journée ! Merci.</p>
+              <span class="slide-name">Patrick</span>
+            </li>        
+            <li class="slide">
+                <span class="stars">★★★★★</span>
+                <p>Merci pour la qualité de la prestation, le parfait timing de livraison, et la superbe surprise de la pièce montée personnalisée pour notre mariage !</p>
+                <span class="slide-name">Silwa</span>
+            </li>
+            <li class="slide">
+              <span class="stars">★★★★★</span>
+              <p>Nous avons fait appel au service de ce traiteur, pour le baptême de notre fille Rosie, début juillet. Ils ont parfaitement répondu à nos attentes. Bonne communication et bon repas (des amuses bouches au dessert), que demander de plus ! Nous recommandons, merci !!</p>
+              <span class="slide-name">Stéphanie</span>
+            </li>
+            <li class="slide">
+              <span class="stars">★★★★★</span>
+              <p>
+                Prestation pour notre mariage, nous nous sommes régalés ! C’était bon, et beau ! Très à l’écoute, nos choix et nos envies ont été respectées à 100%. Nos invités nous ont fait que des bons retour… merci encore à vous pour votre professionnalisme !
+              </p>
+              <span class="slide-name">Mélanie</span>
+            </li>
+            <li class="slide">
+              <span class="stars">★★★★★</span>
+              <p>
+                Le repas était excellent du début à la fin ! Le médaillon de saumon était parfaitement cuit et savoureux, la fricassée de poulet avec sa sauce forestière délicieusement onctueuse, et la bûche cappuccino une vraie douceur pour terminer en beauté. Un grand merci au traiteur pour ce repas de Noël qui a ravi tout le monde. Je recommande vivement !
+              </p>
+              <span class="slide-name">Pierre</span>
+            </li>
+            <li class="slide">
+              <span class="stars">★★★★★</span>
+              <p>
+                Nous avons fait appel à CholTraiteur pour notre mariage et nous sommes très satisfait par la prestation qui a été réalisée. Tous nos invités nous ont faits de très bon retour sur ce qui a été proposé tout au long du mariage. Merci aux équipes !
+              </p>
+              <span class="slide-name">Kévin & Camille</span>
+            </li>
+            <li class="slide">
+              <span class="stars">★★★★★</span>
+              <p>
+                Un régal ce traiteur ! Allez-y les yeux fermés 👌 de l'entrée au dessert, délicieux !
+              </p>
+              <span class="slide-name">Jenn</span>
+            </li>
+            <li class="slide">
+              <span class="stars">★★★★★</span>
+              <p>
+                Tout était très bon et joliment présenté pour le baptême de notre fille. Nos invités nous ont fait que des compliments sur le repas. Et la pièce montée était juste sublime ! Un grand merci à vous tous !!
+              </p>
+              <span class="slide-name">Julie</span>
+            </li>
+            <li class="slide">
+              <span class="stars">★★★★★</span>
+              <p>
+                Cela plusieurs fois que nous prenons Chol pour nos festivités familiale. La dernière en date est le mariage de notre fille le samedi 03 juin. Comme toujours, tout ce qui a accompagné le vin d'honneur et le repas a été excellent. La qualité du service a été un plus pour la réussite de cette grande et importante fête et pour surtout satisfaire les mariés. Tout cela avec une relation de confiance et d'échange qui est saine.
+              </p>
+              <span class="slide-name">Bruno</span>
+            </li>
+          </ul>
+          <div class="slidesNavigation">
+            <label for="radio-1" id="dotForRadio-1"></label>
+            <label for="radio-2" id="dotForRadio-2"></label>
+            <label for="radio-3" id="dotForRadio-3"></label>
+          </div>
+        </div>
+        <div>
+          <button type="button" class="cta" data-toggle="modal" data-target="#contactModal">Devis gratuit</button>
+          <a href="https://maps.app.goo.gl/fQDi7axiQ1mimUzo8" class="cta-link" target="_blank">Laisser un commentaire</a>
+        </div>
+      </div>
+      <div class="adresse row-wrap">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d103352.94363995754!2d5.145459133343256!3d47.10082850729541!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f2bbf89c71c5f3%3A0x6140d899af8727b1!2sChol%20Traiteur!5e0!3m2!1sen!2sfr!4v1738695710418!5m2!1sen!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="column wd-50">
+          <img src="/photos/logo.png" width="300">
+          <p>86 route de Dijon</p>
+          <p>21470 Brazey en Plaine</p>
+          <a href="mailto:contact@choltraiteur.fr">contact@choltraiteur.fr</a>
+          <p>03 80 29 82 67 — 06 71 21 46 93</p>
+        </div>
+      </div>
+    </section>
