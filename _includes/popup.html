@@ -24,9 +24,9 @@
             <div class="row-wrap">
               {% assign category_p = site.pages | sort: "order" %}
               {% for s in category_p %}
-                {% if s.hiding != true %}
+                {% if s.order and s.hiding != true %}
                 <div class="form-check">
-                  <input class="" type="checkbox" value="{{ s.name|downcase }}" id="{{ s.name|downcase }}" name="interests">
+                  <input type="checkbox" value="{{ s.name|downcase }}" id="{{ s.name|downcase }}" name="interests">
                   <label class="form-check-label" for="{{ s.name|downcase}}">
                     <span>{{ s.title }}</span>
                     <img src="/photos/{% if s.category == 'pro' %}services-professionnels{% else %}services-particuliers{% endif %}/{{ s.img }}.png" width="180">
