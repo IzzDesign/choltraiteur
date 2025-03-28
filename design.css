@@ -509,6 +509,7 @@ button.cta, input[type=submit], a.cta-link{
   border: 0;
   max-width: 150px;
   text-transform: none;
+  text-align: center;
   font-weight: 400;
   min-height: 40px;
   box-sizing: border-box;
