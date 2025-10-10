@@ -97,7 +97,7 @@
 {{ content }}
     <div class="contact column center grey">
       <h2>Contact</h2>
-      <form action="https://neamar.fr/email.php" method="POST" id="contactform" />
+      <form action="https://neamar.fr/email.php" method="POST" id="contactform">
         <input type="hidden" name="protection" id="protection" value="1" />
         <p>Pour une demande de devis, n'hésitez pas à préciser : le nombre de convives, la date, si besoin de vaisselle et/ou de serveurs ainsi que vos coordonnées.</p>
         <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email" name="_replyto">
@@ -193,6 +193,9 @@
         });
 
         $("#contactform").submit(function (e) {
+          var button = $('#contactform input[type="submit"]');
+          button.prop("disabled", true)
+          button.val("Envoi...");
           $("#contactform #protection").val(2);
           e.preventDefault();
 
@@ -206,11 +209,13 @@
             success: function (data) {
               console.log("Form success", data);
               $("#contactform .success").show(200);
+              button.val("Envoyé !");
             },
             error: function (xhr, status, c) {
               console.log(xhr.responseText);
               console.log("Form error", xhr, "####", status, "####", c);
               $("#contactform .error").show(200);
+              button.prop("disabled", false);
             },
           });
         });
