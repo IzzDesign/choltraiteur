@@ -157,7 +157,11 @@
         $("#popupform").submit(function (e) {
           $("#popupform #protection").val(2);
           var values = $(this).serializeArray();
-          var message = `Message de ${$("#name").val()} (${$("#phone").val()})`;
+          const name = $("#name").val();
+          if(name.match(/^[A-Za-z]{15,}$/)) {
+            return; // bot
+          }
+          var message = `Message de ${name} (${$("#phone").val()})`;
           message +=
             "\n\nIntérêts : " +
             values
